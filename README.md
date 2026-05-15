@@ -1,16 +1,78 @@
-# React + Vite
+# Student Internship Management System (SIMS)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a demo web application for managing student internships, built for students, companies, lecturers, and system administrators.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The application includes the following core features:
 
-## React Compiler
+- Students:
+  - View a personal dashboard
+  - Browse internship listings
+  - View job posting details
+  - Manage submitted applications
+- Companies:
+  - View a company dashboard
+  - Post internship opportunities
+  - Manage applicant submissions
+- Lecturers:
+  - View a lecturer dashboard
+  - Manage student and internship-related information
+- Administrators:
+  - Manage system users
+  - View all internship postings
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The app currently uses mock data and routes are structured based on user roles.
 
-## Expanding the ESLint configuration
+## Installation & Running
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Open a terminal in the project folder:
+
+```powershell
+cd "c:\UIT\Nam 2\Quản lý dự án\Demo web"
+```
+
+2. Install dependencies:
+
+```powershell
+npm install
+```
+
+3. Run the development server:
+
+```powershell
+npm run dev
+```
+
+4. Open your browser and visit:
+
+```text
+http://localhost:5173
+```
+
+## Build
+
+```powershell
+npm run build
+```
+
+## Testing / Linting
+
+If you add these commands to `package.json`, you can run:
+
+```powershell
+npm run lint
+npm run test
+```
+
+## Project Structure
+
+- `src/components` - shared UI components like `Layout`, `Navbar`, and `Sidebar`
+- `src/pages` - pages organized by role: `Student`, `Company`, `Lecturer`, `Admin`, `Shared`
+- `src/routes` - route definitions and access control
+- `src/context` - global state management for authentication and data
+- `src/data` - mock data used by the application
+
+## Notes
+
+This project currently uses mock data, so you can extend it later with a backend/API for real data persistence.
